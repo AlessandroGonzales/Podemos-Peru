@@ -5,7 +5,7 @@ import yvan from "./assets/yvan.jpeg";
 import walter from "./assets/walter.jpeg";
 import faceWalter from "./assets/facewalter.png";
 import facepepe from "./assets/facepepe.png";
-
+import logo from "./assets/podemosperulogo.png"
 const infoCandidatos = {
   presidente: {
     nombre: "José León Luna Gálvez",
@@ -78,7 +78,7 @@ const CandidatoDetail = () => {
           VOLVER
         </Link>
         <img
-          src="../src/assets/podemosperulogo.png"
+          src={logo}
           className="h-10"
           alt="Logo"
         />

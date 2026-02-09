@@ -1,5 +1,9 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import pepe from "./assets/pepeluna.jpg"
+import yvan from "./assets/yvan.jpeg"
+import walter from "./assets/walter.jpeg"
+import logopodemos from "./assets/podemosperulogo.png"
 
 const LandingPage = () => {
   const candidatos = [
@@ -7,21 +11,21 @@ const LandingPage = () => {
       id: "presidente",
       cargo: "Presidente",
       nombre: "José León Luna Gálvez",
-      imagen: "./assets/pepeluna.jpg",
+      imagen: pepe,
       frase: "Liderazgo con visión de futuro.",
     },
     {
       id: "senador",
       cargo: "Senador",
       nombre: "Yvan Quintanilla",
-      imagen: "./assets/yvan.jpeg",
+      imagen: yvan,
       frase: "Leyes que protegen a tu familia.",
     },
     {
       id: "diputado",
       cargo: "Diputado",
       nombre: "Walter Gupioc",
-      imagen: "./assets/walter.jpeg",
+      imagen: walter,
       frase: "Tu voz en el congreso.",
     },
   ];
@@ -101,7 +105,7 @@ const LandingPage = () => {
       <div className="bg-[#11469E] rounded-[3rem] p-10 md:p-16 text-center text-white relative overflow-hidden shadow-2xl mb-20">
         <div className="absolute top-0 right-0 opacity-10 pointer-events-none">
           <img
-            src="./assets/podemosperulogo.png"
+            src={logopodemos}
             className="w-64"
             alt=""
           />
