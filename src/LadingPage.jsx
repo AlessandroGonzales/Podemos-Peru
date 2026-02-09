@@ -35,7 +35,7 @@ const LandingPage = () => {
       {/* Hero / Header Section */}
       <header className="bg-[#11469E] py-12 px-6 text-center border-b-8 border-[#F3B11F]">
         <img
-          src="./assets/podemosperulogo.png"
+          src={logopodemos}
           alt="Podemos Perú"
           className="h-32 mx-auto drop-shadow-xl mb-6 hover:scale-105 transition-transform"
         />
