@@ -7,21 +7,21 @@ const LandingPage = () => {
       id: "presidente",
       cargo: "Presidente",
       nombre: "José León Luna Gálvez",
-      imagen: "src/assets/pepeluna.jpg",
+      imagen: "./assets/pepeluna.jpg",
       frase: "Liderazgo con visión de futuro.",
     },
     {
       id: "senador",
       cargo: "Senador",
       nombre: "Yvan Quintanilla",
-      imagen: "src/assets/yvan.jpeg",
+      imagen: "./assets/yvan.jpeg",
       frase: "Leyes que protegen a tu familia.",
     },
     {
       id: "diputado",
       cargo: "Diputado",
       nombre: "Walter Gupioc",
-      imagen: "src/assets/walter.jpeg",
+      imagen: "./assets/walter.jpeg",
       frase: "Tu voz en el congreso.",
     },
   ];
@@ -31,7 +31,7 @@ const LandingPage = () => {
       {/* Hero / Header Section */}
       <header className="bg-[#11469E] py-12 px-6 text-center border-b-8 border-[#F3B11F]">
         <img
-          src="src/assets/podemosperulogo.png"
+          src="./assets/podemosperulogo.png"
           alt="Podemos Perú"
           className="h-32 mx-auto drop-shadow-xl mb-6 hover:scale-105 transition-transform"
         />
@@ -101,7 +101,7 @@ const LandingPage = () => {
       <div className="bg-[#11469E] rounded-[3rem] p-10 md:p-16 text-center text-white relative overflow-hidden shadow-2xl mb-20">
         <div className="absolute top-0 right-0 opacity-10 pointer-events-none">
           <img
-            src="../src/assets/podemosperulogo.png"
+            src="./assets/podemosperulogo.png"
             className="w-64"
             alt=""
           />
