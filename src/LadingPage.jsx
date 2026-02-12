@@ -88,40 +88,6 @@ const LandingPage = () => {
             </div>
           ))}
         </div>
-      </main>
-
-      <div className="text-center mb-28">
-        <h2 className="text-4xl md:text-5xl font-black text-[#11469E] mb-12 mt-16">
-          NUESTRA FUERZA ES LA UNIÓN
-        </h2>
-        <div className="w-24 h-2 bg-[#E31D2D] mx-auto mb-8"></div>
-        <p className="text-xl md:text-2xl text-slate-700 leading-relaxed italic max-w-3xl mx-auto">
-          "Ser conservador en el Perú es proteger el tesoro más grande que
-          tenemos: **nuestra familia y nuestra fe**. Es el compromiso de
-          construir un futuro brillante sin olvidar las raíces que nos hicieron
-          grandes."
-        </p>
-      </div>
-      <div className="bg-[#11469E] rounded-[3rem] p-10 md:p-16 text-center text-white relative overflow-hidden shadow-2xl mb-20">
-        <div className="absolute top-0 right-0 opacity-10 pointer-events-none">
-          <img
-            src={logopodemos}
-            className="w-64"
-            alt=""
-          />
-        </div>
-
-        <h3 className="text-3xl md:text-4xl font-black mb-6 relative z-10">
-          Lo Hermoso de ser Conservador por el Perú
-        </h3>
-        <p className="text-lg md:text-xl leading-relaxed text-blue-100 max-w-4xl mx-auto relative z-10">
-          Creemos en un Perú ordenado, seguro y con valores firmes. Ser
-          conservador es abrazar la tradición para transformarla en progreso. Es
-          caminar de la mano con cada peruano, escuchando su voz y protegiendo
-          su esfuerzo. **Porque cuando la familia está unida, el Perú es
-          invencible.**
-        </p>
-      </div>
 
 
       <section className="bg-[#F3B11F] py-12 px-6 text-center">
