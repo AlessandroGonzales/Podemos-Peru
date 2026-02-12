@@ -1,9 +1,9 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import pepe from "./assets/pepeluna.jpg"
-import yvan from "./assets/yvan.jpeg"
-import walter from "./assets/walter.jpeg"
-import logopodemos from "./assets/podemosperulogo.png"
+import pepe from "./assets/pepeluna.jpg";
+import yvan from "./assets/yvan.jpeg";
+import walter from "./assets/walter.jpeg";
+import logopodemos from "./assets/podemosperulogo.png";
 
 const LandingPage = () => {
   const candidatos = [
@@ -61,7 +61,6 @@ const LandingPage = () => {
               className="bg-white rounded-2xl shadow-2xl overflow-hidden border-b-4 border-transparent hover:border-[#E31D2D] transition-all group"
             >
               <div className="h-80 bg-slate-200 overflow-hidden">
-                {/* Placeholder para la imagen del candidato */}
                 <img
                   src={candidato.imagen}
                   alt={candidato.nombre}
@@ -88,8 +87,9 @@ const LandingPage = () => {
             </div>
           ))}
         </div>
+      </main>
 
-
+      {/* Call To Action Section */}
       <section className="bg-[#F3B11F] py-12 px-6 text-center">
         <h2 className="text-3xl md:text-5xl font-black text-[#11469E] mb-6 uppercase">
           Este 12 de Abril
@@ -98,7 +98,9 @@ const LandingPage = () => {
           <p className="text-2xl font-bold text-slate-800 mb-2">
             Marca el <span className="text-5xl text-[#E31D2D]">1</span>
           </p>
-          <p className="text-xl font-black text-[#11469E]">PODEMOS PERÚ</p>
+          <p className="text-xl font-black text-[#11469E]">
+            PODEMOS PERÚ
+          </p>
           <p className="text-sm uppercase tracking-widest mt-4">
             Con Pepe Luna Presidente
           </p>
