@@ -153,7 +153,7 @@ const CandidatoDetail = () => {
                       <h2 className="text-2xl font-bold text-[#11469E]">
                         {cand.nombre}
                       </h2>
-                      <p className="text-[#E31D2D] font-bold text-sm uppercase tracking-widest">
+                      <p className="text-[#E31D2D] font-bold text-sm uppercase tracking-widest text-center">
                         {cand.cargo}
                       </p>
                     </div>
