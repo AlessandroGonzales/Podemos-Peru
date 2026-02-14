@@ -1,8 +1,8 @@
-import React from "react";
 import { Link } from "react-router-dom";
 import pepe from "./assets/pepeluna.jpg";
 import yvawalter from "./assets/yvanwalter.jpeg";
 import logopodemos from "./assets/podemosperulogo.png";
+import extranjeros from "./assets/extranjeros.png";
 
 const LandingPage = () => {
   // Estructura de datos optimizada: permite candidatos individuales o duplas
@@ -19,11 +19,20 @@ const LandingPage = () => {
     {
       id: "pex",
       cargo: "Peruanos en el Extranjero",
-      titulares: "Yvan Quintanilla & Walter Gupioc",
+      titulares: "Yvan Quintanilla e Walter Gupioc",
       imagen: yvawalter,
       frase: "La fuerza y voz de nuestros compatriotas en el mundo.",
       enlace: "/candidato/pex",
       destacado: false,
+    },
+    {
+      id: "pro",
+      cargo: "Propuestas para el Peruano en el extranjero",
+      titulares: "Propuestas de Cambio",
+      imagen: extranjeros,
+      frase: "El cambio viene del trabajo, ideas, y esfuerzo.",
+      enlace: "/propuesta",
+      destacado: true,
     },
   ];
 
@@ -87,7 +96,7 @@ const LandingPage = () => {
 
                 <Link to={item.enlace}>
                   <button className="group relative w-full inline-flex items-center justify-center px-8 py-4 font-black text-[#11469E] transition-all duration-200 bg-[#F3B11F] rounded-xl hover:bg-[#11469E] hover:text-white shadow-lg active:scale-95">
-                    <span className="uppercase tracking-wider">Propuestas</span>
+                    <span className="uppercase tracking-wider">Ver</span>
                     <svg
                       className="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform"
                       fill="none"
@@ -145,8 +154,6 @@ const LandingPage = () => {
           <p className="text-[#11469E] font-black uppercase tracking-[0.2em] text-xs mb-6">
             Conéctate con nosotros
           </p>
-
-          {/* Contenedor de Iconos */}
           <div className="flex gap-8 mb-10">
             {/* Facebook */}
             <a
@@ -179,6 +186,22 @@ const LandingPage = () => {
               </div>
               <span className="text-[10px] font-bold text-slate-400 group-hover:text-[#ee2a7b] uppercase tracking-tighter transition-colors">
                 Instagram
+              </span>
+            </a>
+            {/* TikTok */}
+            <a
+              href="https://www.tiktok.com/@waltergupioc6"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="group flex flex-col items-center gap-2"
+            >
+              <div className="w-14 h-14 bg-white rounded-2xl shadow-sm flex items-center justify-center border border-slate-100 group-hover:bg-black group-hover:text-white transition-all duration-300">
+                <svg className="w-7 h-7 fill-current" viewBox="0 0 24 24">
+                  <path d="M12.525.02c1.31-.02 2.61-.01 3.91-.02.08 1.53.63 3.09 1.75 4.17 1.12 1.11 2.7 1.62 4.24 1.79v4.03c-1.44-.17-2.89-.6-4.13-1.47-.26-.18-.48-.36-.67-.55v6.07c.01 3.76-2.04 7.23-5.55 8.58-3.51 1.35-7.75.43-10.3-2.31-2.55-2.74-3.19-7.21-1.48-10.61 1.72-3.41 5.64-5.23 9.35-4.42v4.03c-2.2-.4-4.39.42-5.48 2.33-1.08 1.91-.71 4.54.91 6.04 1.62 1.5 4.21 1.6 5.95.24 1.32-1.03 1.91-2.81 1.83-4.5V0h.01z" />
+                </svg>
+              </div>
+              <span className="text-[10px] font-bold text-slate-400 group-hover:text-black uppercase tracking-tighter transition-colors">
+                TikTok
               </span>
             </a>
 

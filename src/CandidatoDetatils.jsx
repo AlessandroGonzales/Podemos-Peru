@@ -31,6 +31,8 @@ const infoCandidatos = {
     tipo: "dupla",
     tituloSeccion: "Representación PEX: Fuerza en Unidad",
     lema: "Nuestra prioridad eres tú, donde quiera que estés",
+    videoPlaceholder: "https://web.facebook.com/profile.php?id=61586298763167",
+    thumbnail: yvanwalter,
     candidatos: [
       {
         nombre: "Yvan Quintanilla",
@@ -50,38 +52,6 @@ const infoCandidatos = {
           "Becado para estudiar medicina en Argentina, asumió un rol activo junto al Consulado, trabajando y apoyando a nuestra comunidad Su vida es un equilibrio entre el esfuerzo y la defensa del migrante.",
         imagen: walter,
         logros: ["Líder en salud comunitaria", "Gestor de apoyo consular"],
-      },
-    ],
-    propuestasPEX: [
-      {
-        id: 1,
-        titulo: "Reforma Integral del Sistema Consular",
-        desc: "Digitalización total, reducción de tiempos y trato digno. Un consulado que trabaje para ti, no al revés.",
-        icon: "🏛️",
-      },
-      {
-        id: 2,
-        titulo: "Defensa Permanente del Migrante",
-        desc: "Asistencia legal y laboral gratuita. Protección efectiva contra abusos en el extranjero.",
-        icon: "🛡️",
-      },
-      {
-        id: 3,
-        titulo: "Voto Electrónico Remoto",
-        desc: "Tu derecho a decidir sin barreras geográficas. Participación democrática desde tu celular.",
-        icon: "🗳️",
-      },
-      {
-        id: 4,
-        titulo: "Plan Nacional de Retorno Digno",
-        desc: "Incentivos para emprendimiento y vivienda. Volver a casa debe ser una oportunidad, no un riesgo.",
-        icon: "🏠",
-      },
-      {
-        id: 5,
-        titulo: "Representación Territorial Activa",
-        desc: "Presencia constante en las comunidades. El Congreso escuchando directamente tus necesidades.",
-        icon: "🌍",
       },
     ],
   },
@@ -123,7 +93,7 @@ const CandidatoDetail = () => {
               : "Perfil Oficial Presidencial"}
           </span>
           <h1 className="text-4xl md:text-7xl font-black leading-tight mb-6">
-            {isPEX ? "Yvan Quintanilla & Walter Gupioc" : data.nombre}
+            {isPEX ? "Yvan Quintanilla e Walter Gupioc" : data.nombre}
           </h1>
           <p className="text-[#F3B11F] text-xl md:text-3xl font-light italic max-w-3xl mx-auto">
             "{data.lema}"
@@ -164,94 +134,25 @@ const CandidatoDetail = () => {
                 </div>
               ))}
             </div>
-
-            {/* PROPUESTAS UNIFICADAS - El corazón de la página */}
-            <section className="bg-white rounded-[3rem] p-8 md:p-16 shadow-2xl border border-slate-100">
-              <div className="text-center mb-16">
-                <h2 className="text-3xl md:text-5xl font-black text-[#11469E] mb-4 uppercase">
-                  Compromiso con el Mundo
-                </h2>
-                <div className="w-24 h-2 bg-[#F3B11F] mx-auto rounded-full"></div>
-                <p className="mt-6 text-slate-500 max-w-2xl mx-auto text-lg">
-                  Porque un peruano en el extranjero sigue siendo parte del
-                  motor del país. Trabajamos juntos para que la distancia no
-                  signifique olvido.
-                </p>
-              </div>
-
-              <div className="grid gap-8 max-w-4xl mx-auto">
-                {data.propuestasPEX.map((prop, index) => (
-                  <div
-                    key={prop.id}
-                    className="group relative bg-white rounded-3xl p-8 md:p-10 shadow-[0_10px_30px_rgba(0,0,0,0.05)] hover:shadow-[0_20px_40px_rgba(0,0,0,0.08)] transition-all duration-500 border border-slate-100 overflow-hidden"
-                  >
-                    {/* Decoración de fondo sutil */}
-                    <div className="absolute -top-10 -right-10 w-32 h-32 bg-slate-50 rounded-full group-hover:bg-blue-50 transition-colors duration-500"></div>
-
-                    <div className="relative flex flex-col md:flex-row gap-8 items-start">
-                      {/* Contenedor del Ícono con Círculo de impacto */}
-                      <div className="flex-shrink-0 mx-auto md:mx-0">
-                        <div className="relative">
-                          <div className="absolute inset-0 bg-[#F3B11F] opacity-20 blur-xl rounded-full group-hover:opacity-40 transition-opacity"></div>
-                          <span className="relative flex items-center justify-center text-5xl bg-white w-20 h-20 rounded-2xl shadow-sm border border-slate-50 group-hover:scale-110 transition-transform duration-500">
-                            {prop.icon}
-                          </span>
-                        </div>
-                        {/* Número de propuesta sutil */}
-                        <div className="mt-4 text-center hidden md:block">
-                          <span className="text-slate-300 font-black text-xl">
-                            0{index + 1}
-                          </span>
-                        </div>
-                      </div>
-
-                      {/* Contenido de Texto */}
-                      <div className="flex-1 text-center md:text-left">
-                        <div className="inline-block md:hidden mb-2 text-[#F3B11F] font-black text-sm tracking-widest uppercase">
-                          Propuesta 0{index + 1}
-                        </div>
-                        <h3 className="text-2xl md:text-3xl font-black text-[#11469E] mb-4 group-hover:text-[#E31D2D] transition-colors leading-tight">
-                          {prop.titulo}
-                        </h3>
-                        <div className="h-1 w-16 bg-[#F3B11F] mb-4 mx-auto md:mx-0 rounded-full group-hover:w-24 transition-all duration-500"></div>
-                        <p className="text-slate-600 leading-relaxed text-lg md:text-xl font-medium">
-                          {prop.desc}
-                        </p>
-                        <Link
-                          to={`/propuesta/${prop.id}`}
-                          className="inline-flex items-center mt-6 px-6 py-3 bg-[#11469E] text-white font-bold rounded-xl hover:bg-[#F3B11F] hover:text-[#11469E] transition-all duration-300 group"
-                        >
-                          Ver detalles
-                          <svg
-                            className="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform"
-                            fill="none"
-                            viewBox="0 0 24 24"
-                            stroke="currentColor"
-                          >
-                            <path
-                              strokeLinecap="round"
-                              strokeLinejoin="round"
-                              strokeWidth="2"
-                              d="M13 7l5 5m0 0l-5 5m5-5H6"
-                            />
-                          </svg>
-                        </Link>
-                      </div>
-                    </div>
-                  </div>
-                ))}
-              </div>
-            </section>
             {/* Espacio para Imagen Adicional (Duo o Evento) */}
-            <section className="max-w-6xl mx-auto px-6 mb-20">
-              <div className="rounded-[2rem] overflow-hidden shadow-2xl h-[300px] md:h-[500px] bg-slate-200">
+            <div className="bg-slate-900 aspect-video rounded-3xl overflow-hidden shadow-2xl relative group cursor-pointer">
+              <a
+                href={data.videoPlaceholder}
+                target="_blank"
+                rel="noopener noreferrer"
+              >
                 <img
-                  src={yvanwalter}
-                  alt="Podemos Perú en el Exterior"
-                  className="w-full h-full object-cover"
+                  src={data.thumbnail}
+                  className="w-full h-full object-cover opacity-60 group-hover:scale-105 transition-transform duration-700"
+                  alt="Video"
                 />
-              </div>
-            </section>
+                <div className="absolute inset-0 flex items-center justify-center">
+                  <div className="w-20 h-20 bg-[#F3B11F] rounded-full flex items-center justify-center text-4xl shadow-2xl group-hover:scale-110 transition-transform">
+                    ▶
+                  </div>
+                </div>
+              </a>
+            </div>
           </div>
         ) : (
           /* Diseño para Presidente (Individual) */
@@ -268,18 +169,25 @@ const CandidatoDetail = () => {
                   "{data.historia}"
                 </div>
               </div>
+
               {/* Espacio para Video */}
               <div className="bg-slate-900 aspect-video rounded-3xl overflow-hidden shadow-2xl relative group cursor-pointer">
-                <img
-                  src={data.thumbnail}
-                  className="w-full h-full object-cover opacity-60 group-hover:scale-105 transition-transform duration-700"
-                  alt="Video"
-                />
-                <div className="absolute inset-0 flex items-center justify-center">
-                  <div className="w-20 h-20 bg-[#F3B11F] rounded-full flex items-center justify-center text-4xl shadow-2xl group-hover:scale-110 transition-transform">
-                    ▶
+                <a
+                  href={data.videoPlaceholder}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <img
+                    src={data.thumbnail}
+                    className="w-full h-full object-cover opacity-60 group-hover:scale-105 transition-transform duration-700"
+                    alt="Video"
+                  />
+                  <div className="absolute inset-0 flex items-center justify-center">
+                    <div className="w-20 h-20 bg-[#F3B11F] rounded-full flex items-center justify-center text-4xl shadow-2xl group-hover:scale-110 transition-transform">
+                      ▶
+                    </div>
                   </div>
-                </div>
+                </a>
               </div>
             </div>
 

@@ -4,7 +4,17 @@ import reforma from "./assets/reforma.png";
 import seguridad from "./assets/seguridad.png";
 import voto from "./assets/voto.png";
 import casa from "./assets/casa.png";
-import mundo from "./assets/mundo.png"
+import mundo from "./assets/mundo.png";
+import casados from "./assets/casados.jpg"
+import perusegu from "./assets/perusegu.png"
+import uni from "./assets/uni.jpg"
+import unidos from "./assets/unidos.jpg"
+import aplicacion from "./assets/aplicacion.png"
+import spico from "./assets/psicologia.png"
+import celu from "./assets/celu.png"
+import votoperu from "./assets/votoperu.png"
+import pueblo from "./assets/rosario.jpeg"
+
 
 const PropuestaDetail = ({ data }) => {
   const { id } = useParams();
@@ -32,18 +42,31 @@ const PropuestaDetail = ({ data }) => {
   };
 
   const imagenesPropuestas = {
-    1: reforma, // Consular/Oficina
-    2: seguridad, // Legal/Justicia
-    3: voto, // Voto/Tecnología
-    4: casa, // Retorno/Avión-Viaje
-    5: mundo, // Representación/Reunión
+    1: aplicacion,
+    2: reforma, 
+    3: seguridad, 
+    4: voto, 
+    5: casa, 
+    6: mundo, 
+    7: uni
   };
+
+  const imagenesPropuestasdos = {
+    1: spico,
+    2: celu,
+    3: perusegu,
+    4: votoperu,
+    5: casados,
+    6: pueblo,
+    7: unidos
+  }
+
   return (
     <div className="min-h-screen bg-white font-satoshi">
       {/* Navbar Minimalista de Retorno */}
       <nav className="bg-[#11469E] p-4 text-white flex justify-between items-center sticky top-0 z-50 shadow-md">
         <Link
-          to="/"
+          to="/propuesta"
           className="text-2xl font-black tracking-widest hover:text-[#F3B11F] transition-colors"
         >
           ←
@@ -54,7 +77,7 @@ const PropuestaDetail = ({ data }) => {
       <main className="pb-20">
         {/* Header de la Propuesta */}
         <header className="bg-slate-50 py-16 px-6 border-b border-slate-100">
-          <div className="max-w-3xl mx-auto text-center">
+          <div className="max-w-3xl mx-auto text-center">`  `
             <span className="text-5xl mb-6 block">{propuesta.icon}</span>
             <h1 className="text-3xl md:text-5xl font-black text-[#11469E] leading-tight mb-6">
               {propuesta.titulo}
@@ -68,6 +91,23 @@ const PropuestaDetail = ({ data }) => {
           <div className="rounded-3xl overflow-hidden shadow-2xl h-[300px] md:h-[500px] bg-slate-200 border-8 border-white">
             <img
               src={imagenesPropuestas[propuesta.id]}
+              alt={propuesta.titulo}
+              className="w-full h-full object-cover"
+            />
+          </div>
+        </section>
+        <section className="max-w-3xl mx-auto px-6 mt-16">
+          <div className="whitespace-pre-line text-slate-700 text-lg md:text-xl leading-relaxed font-medium">
+            <p>
+              {propuesta.inicio}
+            </p>
+          </div>
+        </section>
+
+         <section className="max-w-5xl mx-auto px-6 mt-10">
+          <div className="rounded-3xl overflow-hidden shadow-2xl h-[300px] md:h-[500px] bg-slate-200 border-8 border-white">
+            <img
+              src={imagenesPropuestasdos[propuesta.id]}
               alt={propuesta.titulo}
               className="w-full h-full object-cover"
             />
