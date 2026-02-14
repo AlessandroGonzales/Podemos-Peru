@@ -19,13 +19,13 @@ const PropuestaDetail = ({ data }) => {
 
     // Mensaje estructurado para generar curiosidad y confianza
     const mensaje = encodeURIComponent(
-      `🇵🇪 *¡Nuestra voz en el mundo tiene fuerza!* 🌎\n\n` +
+      `*¡Nuestra voz en el mundo tiene fuerza!*\n\n` +
         `Hola, quiero compartirte esta propuesta clave de *Podemos Perú* para transformar nuestra realidad en el extranjero:\n\n` +
-        `📌 *${propuesta.titulo}*\n\n` +
-        `Es momento de que los peruanos en el exterior tengamos una representación real y digna. 💪\n\n` +
-        `✅ Conoce todo el plan aquí:\n` +
-        `👉 ${urlActual}\n\n` +
-        `¡Pásalo a más compatriotas! 🇵🇪✨`,
+        `*${propuesta.titulo}*\n\n` +
+        `Es momento de que los peruanos en el exterior tengamos una representación real y digna.\n\n` +
+        `Conoce todo el plan aquí:\n` +
+        `${urlActual}\n\n` +
+        `¡Pásalo a más compatriotas! `,
     );
 
     window.open(`https://wa.me/?text=${mensaje}`, "_blank");
