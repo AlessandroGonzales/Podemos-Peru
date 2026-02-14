@@ -36,7 +36,7 @@ const infoCandidatos = {
         nombre: "Yvan Quintanilla",
         cargo: "Senador",
         perfil:
-          "Contador Público (UBA) y referente en Argentina. Migró en los 90 y construyó éxito desde el esfuerzo.",
+          "Llegó a Argentina en los años 90 como migrante, apostó a la educación como camino de superación: estudió, se formó, se graduó como Contador Público en la UBA. Construyó una empresa, una trayectoria docente y un fuerte trabajo con la comunidad peruana en el exterior.",
         imagen: yvan,
         logros: [
           "Experto en Ciencias Económicas",
@@ -47,7 +47,7 @@ const infoCandidatos = {
         nombre: "Walter Gupioc",
         cargo: "Diputado ",
         perfil:
-          "Médico y gestor social. Su vida es un equilibrio entre el estetoscopio y la defensa del migrante.",
+          "Becado para estudiar medicina en Argentina, asumió un rol activo junto al Consulado, trabajando y apoyando a nuestra comunidad Su vida es un equilibrio entre el esfuerzo y la defensa del migrante.",
         imagen: walter,
         logros: ["Líder en salud comunitaria", "Gestor de apoyo consular"],
       },
@@ -110,7 +110,7 @@ const CandidatoDetail = () => {
       <section className="relative bg-[#0F172A] text-white py-16 md:py-24 px-6 overflow-hidden">
         <div className="absolute inset-0 opacity-20">
           <img
-            src={isPEX ? yvan : data.imagen}
+            src={isPEX ? yvanwalter : data.imagen}
             alt=""
             className="w-full h-full object-cover scale-110 blur-md"
           />
@@ -141,7 +141,7 @@ const CandidatoDetail = () => {
               {data.candidatos.map((cand, index) => (
                 <div
                   key={index}
-                  className="bg-white rounded-3xl p-8 shadow-xl border-b-4 border-[#11469E] hover:translate-y-[-5px] transition-transform"
+                  className="bg-white rounded-3xl p-8 shadow-xl border-2 border-[#11469E] hover:translate-y-[-5px] transition-transform"
                 >
                   <div className="flex flex-col md:flex-row gap-6 items-center">
                     <img
@@ -217,6 +217,25 @@ const CandidatoDetail = () => {
                         <p className="text-slate-600 leading-relaxed text-lg md:text-xl font-medium">
                           {prop.desc}
                         </p>
+                        <Link
+                          to={`/propuesta/${prop.id}`}
+                          className="inline-flex items-center mt-6 px-6 py-3 bg-[#11469E] text-white font-bold rounded-xl hover:bg-[#F3B11F] hover:text-[#11469E] transition-all duration-300 group"
+                        >
+                          Ver detalles
+                          <svg
+                            className="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform"
+                            fill="none"
+                            viewBox="0 0 24 24"
+                            stroke="currentColor"
+                          >
+                            <path
+                              strokeLinecap="round"
+                              strokeLinejoin="round"
+                              strokeWidth="2"
+                              d="M13 7l5 5m0 0l-5 5m5-5H6"
+                            />
+                          </svg>
+                        </Link>
                       </div>
                     </div>
                   </div>
